@@ -1,101 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Online Shopping student project">
-        <title>Online Shopping</title>
-        <style>
-            :root{--brand:#b04e36;--paper:#fff7f1}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#202337;background:var(--paper);line-height:1.6}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button,a,select,input{outline-offset:4px}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--brand)}.site-header{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #ececf2}.brand{font-size:1.25rem;font-weight:850;letter-spacing:-.04em}.brand span{color:var(--brand)}nav{display:flex;gap:24px;align-items:center}nav a{font-size:.92rem;color:#626579;font-weight:650;transition:color .2s}nav a:hover{color:var(--brand)}.menu-toggle{display:none;border:0;background:transparent;font-size:1.4rem}.page{max-width:1180px;margin:auto;padding:0 6%}.hero{min-height:440px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding:68px 0}.hero h1{font-size:clamp(2.5rem,5vw,4.6rem);line-height:1.03;letter-spacing:-.06em;margin:.25em 0}.hero h2{font-size:1.4rem;line-height:1.3}.hero p{max-width:590px;color:#686b7d}.eyebrow{font-size:.75rem;letter-spacing:.16em;font-weight:800;color:var(--brand)!important}.accent{color:var(--brand)}.btn{display:inline-block;border:0;background:var(--brand);color:white;padding:12px 19px;border-radius:10px;font-weight:750;cursor:pointer;transition:transform .2s,filter .2s;margin-top:12px}.btn:hover{transform:translateY(-2px);filter:brightness(.95)}.btn.secondary{background:#eae7ff;color:#4337a7}section{padding:40px 0 55px}section h2{font-size:clamp(1.7rem,3vw,2.3rem);letter-spacing:-.04em;margin:0 0 18px}section>p{color:#686b7d}.grid{display:grid;gap:20px}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.four{grid-template-columns:repeat(4,minmax(0,1fr))}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:white;border:1px solid #ececf2;border-radius:18px;padding:23px;box-shadow:0 8px 25px #24244b08;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-3px);box-shadow:0 14px 32px #24244b12}.card h3{margin:8px 0}.card p{color:#6c6e80;margin:.5em 0}.tag{font-size:.72rem;letter-spacing:.1em;color:var(--brand);font-weight:850}.icon{font-size:1.8rem;color:var(--brand)}.clean{padding-left:20px;color:#606477}.clean li{padding:5px 0}.steps{padding-left:24px}.steps li{padding:8px 0}.avatar{width:250px;height:250px;border-radius:35% 65% 58% 42%;background:linear-gradient(145deg,var(--brand),#a7a1ff);display:grid;place-items:center;color:white;font-size:4rem;font-weight:900;justify-self:center;box-shadow:20px 20px 0 #dedbff;animation:float 5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-8px)}}.banner{background:linear-gradient(120deg,#e2f6ec,#f6fff9);padding:65px 7%;border-radius:0 0 28px 28px;display:block;min-height:390px}.banner>div{max-width:700px}.banner h1{font-size:clamp(2.8rem,6vw,4.6rem)}.hero-art{height:270px;border-radius:24px;background:linear-gradient(135deg,#dcd9ff,#a9a3ff);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-weight:800;letter-spacing:.12em}.play{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--brand);font-size:1.8rem;box-shadow:0 10px 30px #3026a733}.course-art{height:130px;border-radius:12px;display:grid;place-items:center;font-size:1.6rem;font-weight:900;letter-spacing:.1em;color:white;margin-bottom:18px}.purple{background:linear-gradient(135deg,#7167e8,#b9b1ff)}.orange{background:linear-gradient(135deg,#e98b4e,#f4c28e)}.green{background:linear-gradient(135deg,#2c9c7a,#a5e1c6)}.progress{height:7px;background:#ececf5;border-radius:10px;overflow:hidden;margin:15px 0 6px}.progress span{display:block;height:100%;background:var(--brand);border-radius:10px}.text-link{display:inline-block;color:var(--brand);font-weight:800;margin-top:15px}.dashboard{display:grid;grid-template-columns:220px 1fr;min-height:100vh;background:#f5f7fc}.sidebar{padding:28px 18px;background:white;border-right:1px solid #e7eaf2}.sidebar .brand{padding:0 12px 30px}.sidebar a{display:block;padding:12px;border-radius:10px;color:#626a80;margin:4px 0}.sidebar a.active,.sidebar a:hover{background:#eef1ff;color:var(--brand)}.side-note{margin:40px 12px;color:#8b91a2;font-size:.85rem}.side-note strong{color:#30364b}.dash-main{padding:34px clamp(18px,4vw,50px);min-width:0}.dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}.dash-head h1{margin:0;letter-spacing:-.04em}.dash-head p{margin:4px 0;color:#767d90}.profile{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#dfe5ff;color:#354fc1;font-weight:850}.stats{margin-bottom:28px}.stat{padding:18px}.stat p{margin:0 0 6px;font-size:.9rem}.stat strong{font-size:2rem;letter-spacing:-.04em}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;min-width:520px}th,td{padding:14px 12px;border-bottom:1px solid #eef0f5}th{font-size:.8rem;color:#7d8294}td{font-size:.9rem}.pill{display:inline-block;padding:4px 9px;border-radius:20px;font-size:.75rem;font-weight:800}.good{background:#e4f8ed;color:#24744b}.warn{background:#fff1d7;color:#9a6713}.event{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #eee}.event b{background:#eef1ff;color:var(--brand);padding:7px;border-radius:9px;font-size:.75rem;align-self:flex-start}.event small{display:block;color:#7a8090}.library-hero{background:#eaf5ed;border-radius:0 0 28px 28px;padding:60px 7%}.book-stack{display:flex;align-items:center;justify-content:center;gap:8px;transform:rotate(-4deg)}.book{height:205px;width:115px;border-radius:5px 12px 12px 5px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;font-weight:900;letter-spacing:.08em;box-shadow:8px 12px 20px #243c2c22}.b1{background:#2d6c58}.b2{background:#d5a05e;transform:translateY(-18px)}.b3{background:#6e78a5}.filter-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0}.filter-row input{flex:1;min-width:180px}.filter-row input,.filter-row select,.sort select,.form-row input{border:1px solid #dfe1e8;border-radius:9px;padding:11px 12px;background:#fff}.cover{height:155px;border-radius:10px;display:grid;place-items:center;text-align:center;color:white;font-weight:900;letter-spacing:.08em;font-size:1.25rem;box-shadow:inset 8px 0 #00000012}.cover-blue{background:#3d6684}.cover-peach{background:#c77952}.cover-green{background:#47765c}.cover-purple{background:#7165a2}.cover-dark{background:#33434a}.cover-rose{background:#a75e71}.book-card .cover{margin-bottom:16px}.promo{background:var(--brand);color:white;text-align:center;padding:9px 12px;font-size:.82rem;font-weight:700}.shop-hero{padding-top:54px;padding-bottom:60px}.shop-art{height:290px;background:#f2d8c9;border-radius:28px;position:relative;display:grid;place-items:center;overflow:hidden}.sun{width:190px;height:190px;border-radius:50%;background:#e9aa82;position:absolute;top:25px;right:20px}.bag{position:relative;z-index:1;width:155px;height:170px;border-radius:12px 12px 25px 25px;background:#fdf8f0;display:grid;place-items:center;font-size:1.7rem;font-weight:900;color:var(--brand);box-shadow:12px 18px 25px #8a4e3625}.bag:before{content:"";position:absolute;width:62px;height:35px;border:7px solid #fdf8f0;border-bottom:0;border-radius:35px 35px 0 0;top:-36px}.plant{position:absolute;bottom:28px;left:25px;font-size:4rem;color:#487d60}.category{display:flex;align-items:center;gap:12px;font-size:1.6rem;color:var(--brand)}.category strong{font-size:1rem;color:#33364a}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px}.product-art{height:175px;border-radius:12px;display:grid;place-items:center;font-size:4rem;position:relative}.art-one{background:#f0e7dc;color:#a6754d}.art-two{background:#e5e8f7;color:#5963a6}.art-three{background:#e7f0e8;color:#6c8b70}.discount{position:absolute;top:12px;left:12px;background:#fff;color:#b04e36;border-radius:6px;padding:4px 8px;font-size:.75rem;font-weight:850}.rating{color:#e6a329!important}.rating small{color:#7a7c89}.price{font-weight:850;color:#25273a!important}.price del{font-size:.85rem;color:#999;margin-left:6px;font-weight:500}.add{width:100%}.cart-note{padding:15px;background:white;border:1px solid #eee;border-radius:12px}.newsletter{background:#f5e8de;padding:35px;border-radius:20px;margin-bottom:50px}.newsletter form{max-width:500px}.newsletter label{display:block;font-weight:700;font-size:.85rem}.form-row{display:flex;gap:8px}.form-row input{flex:1;min-width:0}.form-row .btn{margin-top:0}.newsletter small{display:block;margin-top:8px;color:#626579}footer{padding:25px 7%;background:#202337;color:#fff;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer p{margin:0;color:#c4c6d2;font-size:.85rem}@media(max-width:800px){.site-header{padding:0 5%}.menu-toggle{display:block}nav{display:none;position:absolute;top:75px;left:0;right:0;background:#fff;padding:20px 6%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #eee}nav.open{display:flex}.page{padding:0 5%}.hero{grid-template-columns:1fr;padding:45px 0;gap:25px}.avatar{width:190px;height:190px;grid-row:1}.three,.four{grid-template-columns:repeat(2,minmax(0,1fr))}.banner,.library-hero{padding:45px 6%}.dashboard{grid-template-columns:1fr}.sidebar{border-right:0;border-bottom:1px solid #eee;padding:14px;display:flex;gap:8px;align-items:center;overflow-x:auto}.sidebar .brand{padding:0 12px;white-space:nowrap}.sidebar a{white-space:nowrap}.side-note{display:none}.dash-main{padding:25px 18px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:start;flex-direction:column}}@media(max-width:500px){.three,.four,.two{grid-template-columns:1fr}.hero h1{font-size:2.7rem}.book-stack{transform:scale(.86) rotate(-4deg)}.filter-row{align-items:stretch;flex-direction:column}.filter-row input,.filter-row select{width:100%}.form-row{flex-direction:column}.section-head{display:block}.dash-head h1{font-size:1.6rem}.sidebar{flex-wrap:wrap}.sidebar .brand{width:100%}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-        </style>
-    </head>
-    <body style="--brand:#b04e36;--paper:#fff7f1">
-        <header class="site-header">
-            <a class="brand" href="#home">NOVA<span>Market</span></a>
-            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#categories">Categories</a>
-                <a href="#products">Products</a>
-            </nav>
-        </header
-        ><main class="page">
-            <div class="promo">✨ WEEKEND PICKS — Fresh finds for everyday living</div>
-            <section class="hero shop-hero" id="home">
-                <div>
-                    <p class="eyebrow">THE EVERYDAY EDIT</p>
-                    <h1>Good things.<br><span class="accent">Better finds.</span></h1>
-                    <p>Discover thoughtful essentials, useful tech, and little upgrades for your space.</p>
-                    <a class="btn" href="#products">Shop collection</a>
-                </div>
-                <div class="shop-art">
-                    <div class="sun"></div>
-                    <div class="bag">NOVA</div>
-                    <div class="plant">✦</div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online Shopping student project">
+    <title>Online Shopping</title>
+    <style>
+body {margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background: #f0fdfa;
+    line-height: 1.6;
+}a {color: inherit;
+    text-decoration: none;
+}.site-header {padding: 20px 7%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px #b7d8d3;
+}.brand {font-size: 24px;
+    font-weight: bold;
+}.brand span, .accent, .tag, .category, .text-link {color: #087f70;
+}nav a {margin-left: 18px;
+    color: #40545a;
+}.page {max-width: 1100px;
+    margin: auto;
+    padding: 0 22px;
+}.promo {padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #087f70;
+}.hero {display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 45px 0;
+}.hero > div {flex: 1;
+}h1 {font-size: 40px;
+    color: #163f3a;
+}h2 {color: #163f3a;
+}p {color: #53666a;
+}.btn {display: inline-block;
+    padding: 10px 16px;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 5px;
+    background: #087f70;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 3px 7px #b7d8d3;
+}.btn.secondary {background: #c8f3e9;
+    color: #14564d;
+}section {padding: 25px 0;
+}.grid {display: flex;
+    flex-wrap: wrap;
+}.card {padding: 20px;
+    margin:18px;margin-right: 10%;
+    background: #ffffff;
+    border: 1px solid #d6ebe6;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #c9e2dd;
+}.card h3 {color: #234b45;
+}.shop-art {min-height: 240px;
+    background: #bdeee2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.sun {width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #ffbd69;
+}.bag {padding: 45px 28px;
+    background: #ffffff;
+    color: #087f70;
+    border: 2px solid #087f70;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px #8abeb4;
+}.plant {color: #26734d;
+    font-size: 30px;
+}.category {font-size: 22px;
+}.category strong {margin-left: 8px;
+    color: #263238;
+    font-size: 16px;
+}.section-head {display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}.product-art {padding: 25px;
+    text-align: center;
+    font-size: 42px;
+    background: #e1f4ef;
+    border-radius: 6px;
+}.art-two {background: #e4e8fb;
+}.art-three {background: #fff0d8;
+}.discount {display: block;
+    font-size: 13px;
+    color: #b34b30;
+}.rating {color: #d99416;
+}.price {color: #183f39;
+    font-weight: bold;
+}.cart-note {padding: 12px;
+    background: #ffffff;
+    border: 1px solid #d6ebe6;
+}.newsletter {padding: 25px;
+    margin: 25px 0;
+    background: #d8f5ed;
+    border-radius: 8px;
+}.newsletter label {display: block;
+    font-weight: bold;
+}input, select {padding: 10px;
+    border: 1px solid #b7d8d3;
+    border-radius: 4px;
+}.form-row {display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}footer {padding: 22px 7%;
+    color: #ffffff;
+    background: #163f3a;
+}footer p {color: #e0f2ef;
+}
+    </style>
+</head>
+<body>
+    <header class="site-header"><a class="brand" href="#home">NOVA<span>Market</span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav><a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a></nav>
+    </header>
+    <main class="page"><div class="promo">✨ WEEKEND PICKS — Fresh finds for everyday living</div>
+        <section class="hero shop-hero" id="home" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTSgg26nULnpEphgdMogUTlGj5GrP2RAcYS8nHiLjpqg&s=10); background-size:100%; background-repeat: no-repeat;"><div>
+                <p class="eyebrow">THE EVERYDAY EDIT</p>
+                <h1>Good things.<br><span class="accent">Better finds.</span></h1>
+                <p style="color: rgb(104, 93, 93);"><b>Discover thoughtful essentials, useful tech, and little upgrades for your space.</b></p>
+                <a class="btn" href="#products">Shop collection</a></div>
             </section>
-            <section id="categories">
-                <h2>Shop by category</h2>
-                <div class="grid four">
-                    <a class="category card" href="#products">⌂<strong>Home</strong></a>
-                    <a class="category card" href="#products">▣<strong>Electronics</strong></a>
-                    <a class="category card" href="#products">✧<strong>Accessories</strong></a>
-                    <a class="category card" href="#products">♧<strong>Wellness</strong></a>
-                </div></section>
-                <section id="products">
-                    <div class="section-head">
-                        <div>
-                            <p class="eyebrow">HANDPICKED FOR YOU</p>
-                            <h2>Popular right now</h2>
-                        </div>
-                        <label class="sort">Sort by 
-                            <select id="sort">
-                                <option value="featured">Featured</option>
-                                <option value="low">Price: low to high</option>
-                                <option value="high">Price: high to low</option>
-                            </select>
-                        </label>
-                        </div>
-                        <div class="grid three" id="productGrid">
-                            <article class="product card" data-price="1299">
-                                <div class="product-art art-one">◉<span class="discount">-20%</span></div>
-                                <p class="tag">ACCESSORIES</p>
-                                <h3>Everyday Backpack</h3>
-                                <p class="rating">★★★★★ <small>(128 reviews)</small></p>
-                                <p class="price">₹1,299 <del>₹1,599</del></p>
-                                <button class="btn add" type="button">Add to bag</button>
-                            </article>
-                            <article class="product card" data-price="2499">
-                                <div class="product-art art-two">♫<span class="discount">-15%</span></div>
-                                <p class="tag">ELECTRONICS</p>
-                                <h3>Wireless Headphones</h3>
-                                <p class="rating">★★★★☆ <small>(86 reviews)</small></p>
-                                <p class="price">₹2,499 <del>₹2,999</del></p>
-                                <button class="btn add" type="button">Add to bag</button>
-                            </article>
-                            <article class="product card" data-price="799">
-                                <div class="product-art art-three">☕</div>
-                                <p class="tag">HOME</p>
-                                <h3>Ceramic Coffee Mug</h3>
-                                <p class="rating">★★★★★ <small>(54 reviews)</small></p>
-                                <p class="price">₹799</p>
-                                <button class="btn add" type="button">Add to bag</button>
-                            </article>
-                        </div>
-                        <p class="cart-note" aria-live="polite">Bag: <strong id="count">0</strong> items</p>
-                    </section>
-                    <section class="newsletter">
-                        <h2>A little note from NOVA</h2>
-                        <p>New arrivals, useful ideas, and occasional special offers.</p>
-                        <form id="subscribe">
-                            <label for="email">Email address</label>
-                            <div class="form-row">
-                                <input id="email" type="email" placeholder="you@example.com" required>
-                                <button class="btn" type="submit">Sign me up</button>
-                            </div>
-                            <small id="message" aria-live="polite"></small>
-                        </form>
-                    </section>
-                </body>
-                </html>
+        <section id="categories"><h2>Shop by category</h2>
+            <div class="grid four">
+                <a class="category card" href="#products">⌂<strong>Home</strong></a>
+                <a class="category card" href="#products">▣<strong>Electronics</strong></a>
+                <a class="category card" href="#products">✧<strong>Accessories</strong></a>
+                <a class="category card" href="#products">♧<strong>Wellness</strong></a>
+            </div></section>
+        <section id="products"><div class="section-head">
+                <div>
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+                    <h2>Popular right now</h2>
+                </div>
+                <label class="sort">Sort by <select id="sort">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: low to high</option>
+                        <option value="high">Price: high to low</option>
+                    </select>
+                </label></div>
+            <div class="grid three" id="productGrid"><article class="product card" data-price="1299">
+                    <div class="product-art art-one">◉<span class="discount">-20%</span></div>
+                    <p class="tag">ACCESSORIES</p>
+                    <h3>Everyday Backpack</h3>
+                    <p class="rating">★★★★★ <small>(128 reviews)</small></p>
+                    <p class="price">₹1,299 <del>₹1,599</del></p>
+                    <button class="btn add" type="button">Add to bag</button>
+                </article>
+                <article class="product card" data-price="2499">
+                    <div class="product-art art-two">♫<span class="discount">-15%</span></div>
+                    <p class="tag">ELECTRONICS</p>
+                    <h3>Wireless Headphones</h3>
+                    <p class="rating">★★★★☆ <small>(86 reviews)</small></p>
+                    <p class="price">₹2,499 <del>₹2,999</del></p>
+                    <button class="btn add" type="button">Add to bag</button>
+                </article>
+                <article class="product card" data-price="799">
+                    <div class="product-art art-three">☕</div>
+                    <p class="tag">HOME</p>
+                    <h3>Ceramic Coffee Mug</h3>
+                    <p class="rating">★★★★★ <small>(54 reviews)</small></p>
+                    <p class="price">₹799</p>
+                    <button class="btn add" type="button">Add to bag</button>
+                </article></div>
+            <p class="cart-note" aria-live="polite">Bag: <strong id="count">0</strong> items</p>
+        </section>
+        <section class="newsletter"><h2>A little note from NOVA</h2>
+            <p>New arrivals, useful ideas, and occasional special offers.</p>
+            <form id="subscribe">
+                <label for="email">Email address</label>
+                <div class="form-row">
+                <input id="email" type="email" placeholder="you@example.com" required>
+                <button class="btn" type="submit">Sign me up</button></div>
+                <small id="message" aria-live="polite"></small>
+            </form></section>
+</body>
+</html> 
